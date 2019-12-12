@@ -1,0 +1,17 @@
+{
+  "name": "connecting-websockets-to-osc-for-rpi",
+  "version": "1.0.0",
+  "description": "Setup for creating a server, connecting via websockets and sending osc on Raspberry Pi",
+  "main": "webserver.js",
+  "scripts": {
+    "start": "node webserver.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guergana Tzatchkova",
+  "license": "ISC",
+  "dependencies": {
+    "node-osc": "file:node-osc-4.1.4.tgz",
+    "osc-js": "file:osc-js-2.1.0.tgz",
+    "socket.io": "file:socket.io-2.3.0.tgz"
+  }
+}
