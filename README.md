@@ -106,3 +106,6 @@ When you connect to the address ```http://192.168.4.1:8000``` (or whatever port 
 # Note:
 
 As a final note I would like to add, that when working on an offline raspberry Pi, you can transfer files files from the Raspberry Pi to the Computer by typing from the terminal of the computer:  ```scp pi@193.168.4.1:myFolder/myFile.tar.gz .``` myFolder would be the path from ```/pi/home/```. This command will copy the file to the current director in the Terminal. 
+
+You can read [more about SCP 
+here](https://www.raspberrypi.org/documentation/remote-access/ssh/scp.md).
