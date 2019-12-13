@@ -1,9 +1,13 @@
+## The easy way (recommended)
+
 If you have downloaded the Raspberry Image, you don't need to setup anything.
 
 1. Connect to the Wifi with name: `recurBoy`, the password is: `recurboy`
 2. Open http://192.168.4.1:8000
 
 And you are be ready to go.
+
+## The hard way
 
 If you would like to do the setup yourself refer to these instructions:
 
