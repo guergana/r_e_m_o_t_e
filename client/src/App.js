@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import keysData from "data/keys";
+import "./App.css";
+//absolute imports possible thanks to NODE_PATH var in .env file
+import Key from "components/Key";
 
 function App() {
+  const displayMode = "normal"; // "dev" or whatever else
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {keysData.map(key => {
+        return (
+          <Key key={key.letter} displayMode={displayMode} keySettings={key} />
+        );
+      })}
     </div>
   );
 }

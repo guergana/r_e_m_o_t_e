@@ -1,0 +1,62 @@
+.keyWrapper {
+  flex: 1;
+  display: flex;
+}
+
+.key {
+  border: 8px solid lightgray;
+  border-radius: 5px;
+  color: white;
+  flex: 1;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.keyWrapper:not(.double) {
+  flex-basis: 20%;
+}
+
+.key span {
+  font-size: 2.4em;
+  padding: 8px 20px;
+  border-bottom: 3px solid white;
+}
+
+.keyWrapper.double {
+  flex: 2;
+  flex-basis: 40%;
+}
+
+/* css try to force landscape mode -> will try another approach*/
+@media screen and (orientation: portrait) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  .key span {
+    font-size: 1.8em;
+    padding: 2px 5px;
+  }
+}
+
+@media screen and (max-width: 1048px) and (orientation: landscape) {
+  .key span {
+    font-size: 1.8em;
+    padding: 2px 5px;
+  }
+}
+
+@media screen and (max-width: 667px) and (orientation: landscape) {
+  .key span {
+    font-size: 1.5em;
+    padding: 5px 10px;
+  }
+}

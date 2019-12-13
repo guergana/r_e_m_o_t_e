@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h2>OSC Control</h2>
-<input id="light" type="checkbox">Turn on!
-<script src="./socket.io-client.js"></script>
-<script>
-var socket = io();
-window.addEventListener("load", function (){
-	var lightbox =  document.getElementById("light");
-	lightbox.addEventListener("change", function(){
-		socket.emit("light", Number(this.checked));
-	});
-});
-socket.on("light", function(data){
-	document.getElementById("light").checked = data;
-	socket.emit("light", data);
-});
-</script>
-</body>
+  <body>
+    <h2>OSC Control</h2>
+    <input id="light" type="checkbox" />Turn on!
+    <script src="./socket.io-client.js"></script>
+    <script>
+      let socket = io();
+      window.addEventListener("load", function() {
+        var lightbox = document.getElementById("light");
+        lightbox.addEventListener("change", function() {
+          socket.emit("light", Number(this.checked));
+        });
+      });
+      socket.on("light", function(data) {
+        document.getElementById("light").checked = data;
+        socket.emit("light", data);
+      });
+    </script>
+  </body>
 </html>

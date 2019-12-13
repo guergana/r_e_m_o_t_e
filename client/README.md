@@ -11,7 +11,9 @@ In case you modify anything from the existing client src files, run `yarn build`
 
 The files that are being sent by the server are in `client/public/build`.
 
-## Available Scripts
+---
+
+## Available Scripts (for local development)
 
 In the project directory, you can run:
 
