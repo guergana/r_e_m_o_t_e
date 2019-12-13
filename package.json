@@ -10,7 +10,7 @@
   "author": "Guergana Tzatchkova",
   "license": "ISC",
   "dependencies": {
-    "osc-js": "file:osc-js-2.1.0.tgz",
-    "socket.io": "file:socket.io-2.3.0.tgz"
+    "osc-js": "libraries_for_offline_install/file:osc-js-2.1.0.tgz",
+    "socket.io": "libraries_for_offline_install/file:socket.io-2.3.0.tgz"
   }
 }
