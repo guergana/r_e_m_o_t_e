@@ -31,7 +31,7 @@
 }
 
 /* css try to force landscape mode -> will try another approach*/
-@media screen and (orientation: portrait) {
+/*@media screen and (orientation: portrait) {
   html {
     transform: rotate(-90deg);
     transform-origin: left top;
@@ -45,7 +45,7 @@
     font-size: 1.8em;
     padding: 2px 5px;
   }
-}
+}*/
 
 @media screen and (max-width: 1048px) and (orientation: landscape) {
   .key span {
@@ -58,5 +58,11 @@
   .key span {
     font-size: 1.5em;
     padding: 5px 10px;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  .key span {
+    font-size: 1em;
   }
 }

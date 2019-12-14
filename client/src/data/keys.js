@@ -2,17 +2,20 @@ const keysData = [
   {
     letter: "a",
     display: "<",
-    color: "red"
+    color: "red",
+    FN: "%"
   },
   {
     letter: "b",
     display: ">",
-    color: "red"
+    color: "red",
+    FN: "&"
   },
   {
     letter: "c",
     display: "■",
-    color: "red"
+    color: "red",
+    FN: "¿"
   },
   {
     letter: "d",
