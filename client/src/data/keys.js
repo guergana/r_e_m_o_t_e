@@ -2,20 +2,17 @@ const keysData = [
   {
     letter: "a",
     display: "<",
-    color: "red",
-    FN: "%"
+    color: "red"
   },
   {
     letter: "b",
     display: ">",
-    color: "red",
-    FN: "&"
+    color: "red"
   },
   {
     letter: "c",
     display: "■",
-    color: "red",
-    FN: "¿"
+    color: "red"
   },
   {
     letter: "d",
@@ -25,15 +22,18 @@ const keysData = [
   },
   {
     letter: "e",
-    display: "["
+    display: "[",
+    FN: "CLR ["
   },
   {
     letter: "f",
-    display: "]"
+    display: "]",
+    FN: "CLR ]"
   },
   {
     letter: "g",
-    display: "⭗"
+    display: "⭗",
+    FN: "REC"
   },
   {
     letter: "h",
@@ -47,15 +47,18 @@ const keysData = [
   },
   {
     letter: "j",
-    display: "0"
+    display: "0",
+    FN: "PRV BNK"
   },
   {
     letter: "k",
-    display: "1"
+    display: "1",
+    FN: "NXT BNK"
   },
   {
     letter: "l",
-    display: "2"
+    display: "2",
+    FN: "CLR BNK"
   },
   {
     letter: "m",
@@ -67,23 +70,28 @@ const keysData = [
   },
   {
     letter: "o",
-    display: "5"
+    display: "5",
+    FN: "MIRROR"
   },
   {
     letter: "p",
-    display: "6"
+    display: "6",
+    FN: "SHADER"
   },
   {
     letter: "q",
-    display: "7"
+    display: "7",
+    FN: "FRAMES"
   },
   {
     letter: "r",
-    display: "8"
+    display: "8",
+    FN: "FEEDBCK"
   },
   {
     letter: "s",
-    display: "9"
+    display: "9",
+    FN: "SHUTDWN"
   }
 ];
 

@@ -36,15 +36,19 @@ class Key extends React.Component {
         onClick={() => this.handleClick(letter)}
       >
         <div
-          className="key"
+          className="key disable-selection"
           style={{
             backgroundColor: isFNOn && display === "FN" ? "#888" : null
           }}
         >
           <span
             style={{
-              color: displayMode === "dev" ? undefined : color
-              /*fontSize: display.length >= 3 ? "1.2em" : null*/
+              color: displayMode === "dev" ? undefined : color,
+              fontSize:
+                isFNOn && FN
+                  ? "2.4vw"
+                  : /*size === "double" ? "3em" :*/ "3.0vw",
+              padding: display === "DSPLY" ? "8px 0" : null
             }}
           >
             {displayMode === "dev" ? letter : isFNOn && FN ? FN : display}
