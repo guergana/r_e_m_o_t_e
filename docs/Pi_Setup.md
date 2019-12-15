@@ -123,4 +123,4 @@ Inside the terminal of the pi run: `./start.sh`, it will run the node server and
 
 In the terminal you will only see the output of the python-osc server, because the node server is running on the background (for now we care only about the last part of the chain).
 
-\*\* If you want to go through this process yourself don't forget to change the permissions of the bash file, otherwise you won't be able to run it. You can do so by running `chmod +x .start.sh`
+\*\* If you want to go through this process yourself don't forget to change the permissions of the bash file, otherwise you won't be able to run it. You can do so by running `chmod +x start.sh`
