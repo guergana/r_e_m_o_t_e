@@ -1,12 +1,13 @@
-const http = require("http").createServer(handler);
+const http = require("http");
+const server = http.createServer(handler);
 const fs = require("fs");
 const path = require("path");
-const io = require("socket.io")(http);
+const io = require("socket.io")(server);
 const OSC = require("osc-js");
 
 const port = process.argv[2] || 8080;
 
-http.listen(parseInt(port, 10));
+server.listen(parseInt(port, 10));
 
 function handler(req, res) {
   console.log("request", req.url);
@@ -82,3 +83,45 @@ io.sockets.on("connection", function(socket) {
     osc.send(new OSC.Message(`/keyboard/${data}/`, 1));
   });
 });
+
+setInterval(
+  () =>
+    server.getConnections((err, connections) =>
+      console.log(`${connections} connections currently open`)
+    ),
+  1000
+);
+
+//https://stackoverflow.com/questions/43003870/how-do-i-shut-down-my-express-server-gracefully-when-its-process-is-killed
+
+process.on("SIGTERM", shutDown);
+process.on("SIGINT", shutDown);
+
+let connections = [];
+
+server.on("connection", connection => {
+  connections.push(connection);
+  connection.on(
+    "close",
+    () => (connections = connections.filter(curr => curr !== connection))
+  );
+});
+
+function shutDown() {
+  console.log("Received kill signal, shutting down gracefully");
+  osc.send(new OSC.Message(`/shutdown`, 1));
+  server.close(() => {
+    console.log("Closed out remaining connections");
+    process.exit(0);
+  });
+
+  setTimeout(() => {
+    console.error(
+      "Could not close connections in time, forcefully shutting down"
+    );
+    process.exit(1);
+  }, 10000);
+
+  connections.forEach(curr => curr.end());
+  setTimeout(() => connections.forEach(curr => curr.destroy()), 5000);
+}

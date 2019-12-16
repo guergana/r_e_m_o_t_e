@@ -8,8 +8,10 @@ import argparse
 from pythonosc import dispatcher
 from pythonosc import osc_server
 
-def printMessage(message):
-  print(message)
+def shutdown_server(address, code):
+  server.shutdown()
+  print("--- Osc Server Stopped ---")
+  exit()
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser()
@@ -21,6 +23,7 @@ if __name__ == "__main__":
 
   dispatcher = dispatcher.Dispatcher()
   dispatcher.map("/keyboard/*", print)
+  dispatcher.map("/shutdown", shutdown_server)
 
   server = osc_server.ThreadingOSCUDPServer(
       (args.ip, args.port), dispatcher)
