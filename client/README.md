@@ -37,4 +37,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Running tests:
 
-You can run the file `src/App.test.js` by typing: `npm test src/App.test.js` on the Terminal.
+We are using react-testing-library for tests. [Read more about it here](https://thomlom.dev/test-react-testing-library/).
+
+You can run the file `src/App.test.js` by typing: `npm test src/App.test.js` or `yarn test` in the Terminal.
