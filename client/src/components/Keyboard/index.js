@@ -1,14 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 import keysData from "data/keys";
 import Key from "components/Key";
 
 class Keyboard extends React.Component {
-  static propTypes = {
-    keySettings: PropTypes.object.isRequired,
-    handleFNToggle: PropTypes.func
-  };
-
   state = {
     isFNOn: false,
     displayMode: "normal"

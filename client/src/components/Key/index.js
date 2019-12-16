@@ -40,6 +40,7 @@ class Key extends React.Component {
           style={{
             backgroundColor: isFNOn && display === "FN" ? "#888" : null
           }}
+          data-letter={letter}
         >
           <span
             style={{

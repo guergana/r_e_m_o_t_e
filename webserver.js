@@ -79,6 +79,6 @@ io.sockets.on("connection", function(socket) {
 
   socket.on("keyPress", function(data) {
     console.log("--- key press received by socket ---", data);
-    osc.send(new OSC.Message("/recurOsc", data));
+    osc.send(new OSC.Message(`/keyboard/${data}/`, 1));
   });
 });
