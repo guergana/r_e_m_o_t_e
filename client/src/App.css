@@ -1,3 +1,20 @@
+@font-face {
+  font-family: "liberation_monobold";
+  src: url("./assets/fonts/liberationmono-bold-webfont.woff2") format("woff2"),
+    url("./assets/fonts/liberationmono-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "liberation_monoregular";
+  src: url("./assets/fonts/liberationmono-regular-webfont.woff2")
+      format("woff2"),
+    url("./assets/fonts/liberationmono-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
   background-color: #282c34;
@@ -5,4 +22,9 @@
   color: white;
   display: flex;
   flex-wrap: wrap;
+}
+
+html,
+body {
+  font-family: "liberation_monoregular";
 }

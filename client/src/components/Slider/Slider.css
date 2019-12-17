@@ -1,0 +1,99 @@
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+h1 {
+  line-height: 1.4em;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+li:hover {
+  background-color: yellow;
+}
+
+li:hover a {
+  color: black;
+}
+
+.smaller {
+  font-size: 0.6em;
+}
+
+.rainbow {
+  background: red;
+  background: -webkit-linear-gradient(
+    left,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  background: -o-linear-gradient(
+    right,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  background: -moz-linear-gradient(
+    right,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  background: linear-gradient(
+    to right,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5em;
+}
+
+.recur {
+  font-size: 1.3em;
+  color: #fff;
+  text-transform: lowercase;
+  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(to right, orange, cyan, yellow, orange);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3.5s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.interface-list {
+  list-style: none;
+  line-height: 1.6em;
+}
