@@ -1,8 +1,23 @@
 # Step 1. Set up your raspberry pi as a Wireless Access Point (maybe should be last step)
 
+These options are offered in case your particular setup requires something particular, but we strongly recommend using *Option 1*.
+
+## Option 1 (highly recommended):
+
+If you want to choose with a flag if you connnect the Pi to the Wlan, or if the Pi works as a Wireless Access Point. 
+[Follow these instructions](https://github.com/Autodrop3d/raspiApWlanScripts)
+
+These would allow you to connnect to the raspberry Pi directly via wifi with a preset IP and also to download 
+
+## Option 2:
+
+If you want to set your connection to connect to the raspberry Pi as Wireless Access Point only when there is no Wifi connection available. [Follow these instructions](https://www.raspberryconnect.com/projects/65-raspberrypi-hotspot-accesspoints/157-raspberry-pi-auto-wifi-hotspot-switch-internet)
+
+## Option 3 (least recommended option):
+
 _Important! Make sure to do all this once you have downloaded all the packages (npm install, updates, etc) you need from internet, you won't be able to access the internet once you set up your Pi as a Wireless Access Point._
 
-To set up your raspberry pi zero W as a wireless access point, [follow these instructions](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md).
+To set up your raspberry pi zero W as a wireless access point, [follow these instructions](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md). Will disable your current wifi configuration, you will only be able to connect via SSH. 
 
 # Step 2. Install Node on the raspberry pi
 
