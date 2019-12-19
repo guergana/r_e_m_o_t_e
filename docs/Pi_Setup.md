@@ -1,13 +1,13 @@
 # Step 1. Set up your raspberry pi as a Wireless Access Point (maybe should be last step)
 
-These options are offered in case your particular setup requires something particular, but we strongly recommend using *Option 1*.
+These options are offered in case your particular setup requires something particular, but we strongly recommend using _Option 1_.
 
 ## Option 1 (highly recommended):
 
-If you want to choose with a flag if you connnect the Pi to the Wlan, or if the Pi works as a Wireless Access Point. 
+If you want to choose with a flag if you connnect the Pi to the Wlan, or if the Pi works as a Wireless Access Point.
 [Follow these instructions](https://github.com/Autodrop3d/raspiApWlanScripts)
 
-These would allow you to connnect to the raspberry Pi directly via wifi with a preset IP and also to download 
+These would allow you to connnect to the raspberry Pi directly via wifi with a preset IP and also to download
 
 ## Option 2:
 
@@ -17,7 +17,7 @@ If you want to set your connection to connect to the raspberry Pi as Wireless Ac
 
 _Important! Make sure to do all this once you have downloaded all the packages (npm install, updates, etc) you need from internet, you won't be able to access the internet once you set up your Pi as a Wireless Access Point._
 
-To set up your raspberry pi zero W as a wireless access point, [follow these instructions](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md). Will disable your current wifi configuration, you will only be able to connect via SSH. 
+To set up your raspberry pi zero W as a wireless access point, [follow these instructions](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md). Will disable your current wifi configuration, you will only be able to connect via SSH.
 
 # Step 2. Install Node on the raspberry pi
 
@@ -39,7 +39,7 @@ or
 
 `curl -o node-v10.17.0-linux-armv6l.tar.gz https://nodejs.org/dist/latest-v10.x/node-v10.17.0-linux-armv6l.tar.gz`
 
-or doing ssh into the pi and copying the files to the pi from the terminal of your computer:
+or if you are offline on the Pi, by doing ssh into the pi and copying the files to the pi from the terminal of your computer:
 
 `"C:\Program Files\PuTTY\pscp.exe" node-v10.17.0-linux-armv6l.tar.gz pi@192.168.4.1:/home/pi`
 
@@ -58,10 +58,14 @@ Now run: `node -v` to verify that node was installed correctly.
 
 # Step 3. Install socket.io
 
+## Pi is online
+
 If you haven't set up the wireless port yet, the connectivity of your Raspberry Pi W should work, in that case, type:
 `npm install socket.io --save` and npm should install the package for you.
 
 or
+
+### Pi is offline
 
 If you didn't follow the steps in order, and you set up the Wireless Access Point before, you won't have access to internet, so you'll need to download the package on your computer, pass it through SSH to the Raspberry Pi and then install it from there.
 
@@ -90,7 +94,11 @@ This will put all the dependencies also inside of the tarball, because you won't
 
 Now we need to install a node osc package (there are plenty online) to be able to send OSC messages between the different parts of the app. We have chosen node-osc.
 
+## Pi online
+
 If your Pi has connection to Internet do simply `npm install node-osc --save` in the root of the project.
+
+## Pi offline
 
 If your Raspberry Pi is offline we need, again, to take the long road:
 
@@ -106,7 +114,11 @@ If your Raspberry Pi is offline we need, again, to take the long road:
 
 Now we need to install the python library that will communicate with the Python project (in this case, r_e_c_u_r).
 
+## Pi online
+
 This has to be done also on the Pi, if the Raspberry Pi is connected to the internet, do `pip3 install python-osc` in the folder project. Also copy the `py-osc-server.py` file to the folder project.
+
+## Pi offline
 
 If your rasppi is offline, you need to:
 
@@ -119,7 +131,7 @@ Now run `python3 py-osc-server.py` to have the OSC server listening for messages
 
 # And Finally!!!
 
-When you connect to the address `http://192.168.4.1:8000` (or whatever port you have configured in webserver), you will be able to send messages to the node app, and from the node app to any application with OSC activated on port 5233 (defined in `py-osc-server.py` and in `webserver.js`)
+When you connect to the address `http://192.168.4.1:8080` (or whatever port you have configured in webserver), you will be able to send messages to the node app, and from the node app to any application with OSC activated on port 5233 (defined in `py-osc-server.py` and in `webserver.js`)
 
 # Notes:
 
