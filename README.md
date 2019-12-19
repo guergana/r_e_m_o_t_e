@@ -1,5 +1,13 @@
 ## The easy way (recommended)
 
+### In dev:
+
+Make sure to go to `/client` and run `yarn build` to serve the lastest changes.
+
+Run `node webserver.js` and open `https://localhost:8080` to see the project.
+
+### In production
+
 If you have downloaded the Raspberry Image, you don't need to setup anything.
 
 1. Connect to the Wifi with name: `recurBoy`, the password is: `recurboy`
