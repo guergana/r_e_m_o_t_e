@@ -12,6 +12,7 @@ class Key extends React.Component {
   };
 
   componentDidMount() {
+    //add eventlistener
     socket.on("keyPress", function(data) {
       socket.emit("keyPress", data);
     });

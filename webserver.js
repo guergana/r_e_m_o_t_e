@@ -78,9 +78,19 @@ io.sockets.on("connection", function(socket) {
     console.log("--- user disconnected ---");
   });
 
+  //used in /keyboard endpoint
   socket.on("keyPress", function(data) {
     console.log("--- key press received by socket ---", data);
     osc.send(new OSC.Message(`/keyboard/${data}/`, 1));
+  });
+
+  //used in shaderParams endpoint
+  socket.on("sliderChange", function(data) {
+    const { paramName, value } = data;
+    console.log(
+      `--- sliderChange received by socket: ${paramName} received. value: ${value}`
+    );
+    osc.send(new OSC.Message(`/${paramName}/`, value));
   });
 });
 

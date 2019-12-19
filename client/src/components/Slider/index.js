@@ -1,15 +1,37 @@
 import React from "react";
 import "./Slider.css";
+import io from "socket.io-client";
+import PropTypes from "prop-types";
 import { Range, getTrackBackground } from "react-range";
 
-const STEP = 0.1;
+const STEP = 0.01;
 const MIN = 0;
-const MAX = 100;
+const MAX = 1;
 
+let socket = io();
 const Direction = "to top";
 
 class Slider extends React.Component {
-  state = { values: [50] };
+  static propTypes = {
+    shader: PropTypes.string.isRequired,
+    paramName: PropTypes.string.isRequired
+  };
+
+  state = { values: [0.0] };
+
+  onChangeHandler = values => {
+    const { paramName } = this.props;
+    this.setState({ values });
+    socket.emit("sliderChange", { paramName, value: values[0] });
+  };
+
+  componentDidMount() {
+    //add eventlistener
+    socket.on("sliderChange", function(data) {
+      socket.emit("sliderChange", data);
+    });
+  }
+
   render() {
     return (
       <div
@@ -27,7 +49,7 @@ class Slider extends React.Component {
           step={STEP}
           min={MIN}
           max={MAX}
-          onChange={values => this.setState({ values })}
+          onChange={values => this.onChangeHandler(values)}
           renderTrack={({ props, children }) => (
             <div
               onMouseDown={props.onMouseDown}
@@ -89,7 +111,7 @@ class Slider extends React.Component {
             style={{ marginTop: "50px", marginBottom: "50px", width: "56px" }}
             id="output"
           >
-            {this.state.values[0].toFixed(1)}
+            {this.state.values[0].toFixed(2)}
           </output>
         }
       </div>
