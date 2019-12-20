@@ -1,5 +1,5 @@
 import React from "react";
-import "./ShaderParams.css";
+import "./ShaderParams.scss";
 import Slider from "components/Slider";
 
 const sliders = [

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import io from "socket.io-client";
-import "./Key.css";
+import "./Key.scss";
 
 let socket = io();
 

@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.slider {
+  flex: 1;
+  &-panel {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: space-around;
+  }
+}

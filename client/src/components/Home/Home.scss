@@ -1,3 +1,5 @@
+@import "../../assets/styles/shared.scss";
+
 .container {
   max-width: 80%;
   margin: 0 auto;
@@ -15,14 +17,9 @@ a {
 
 li:hover {
   background-color: yellow;
-}
-
-li:hover a {
-  color: black;
-}
-
-.smaller {
-  font-size: 0.6em;
+  & a {
+    color: black;
+  }
 }
 
 .rainbow {

@@ -1,0 +1,44 @@
+@import "../../assets/styles/shared.scss";
+
+.key {
+  border: 8px solid lightgray;
+  border-radius: 5px;
+  color: white;
+  flex: 1;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &Wrapper {
+    flex: 1;
+    display: flex;
+    &:not(.double) {
+      flex-basis: 20%;
+    }
+    &.double {
+      flex: 2;
+      flex-basis: 40%;
+    }
+  }
+
+  &:active {
+    background-color: #888;
+  }
+  & span {
+    font-size: 2.4em;
+    padding: 8px 20px;
+    border-bottom: 3px solid white;
+
+    @media screen and (max-width: 1048px) and (orientation: landscape) {
+      font-size: 1.8em;
+      padding: 2px 5px;
+    }
+
+    @media screen and (max-width: 667px) and (orientation: landscape) {
+      font-size: 1.5em;
+      padding: 5px 10px;
+    }
+  }
+}

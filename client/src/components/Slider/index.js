@@ -1,5 +1,4 @@
 import React from "react";
-import "./Slider.css";
 import io from "socket.io-client";
 import PropTypes from "prop-types";
 import { Range, getTrackBackground } from "react-range";

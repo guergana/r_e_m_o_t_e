@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //absolute imports possible thanks to NODE_PATH var in .env file
 import Home from "components/Home";
