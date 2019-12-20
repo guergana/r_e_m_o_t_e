@@ -11,7 +11,7 @@ Run `node webserver.js` and open `https://localhost:8080` to see the project.
 If you have downloaded the Raspberry Image, you don't need to setup anything.
 
 1. Connect to the Wifi with name: `recurBoy`, the password is: `recurboy`
-2. Open http://192.168.4.1:8000
+2. Open http://192.168.4.1:8080
 
 And you are be ready to go.
 
