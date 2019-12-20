@@ -9,7 +9,7 @@ The Front-End is a React app bootstrapped with [Create React App](https://github
 
 In case you modify anything from the existing client src files, run `yarn build` or `npm build` to remake the build and see your changes.
 
-The files that are being sent by the server are in `client/public/build`.
+The files that are being sent by the server are in `client/build`.
 
 ---
 
