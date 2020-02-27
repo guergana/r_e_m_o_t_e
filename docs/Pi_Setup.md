@@ -29,11 +29,11 @@ If the response starts with armv6 than that's the version that you will need. Fo
 
 The latest version that supports armv6 is v.10.x, go to [Node's official website](https://nodejs.org/en/download/releases/) and download the tar.gz file that you need.
 
-In my case it was: [node-v10.17.0-linux-armv6l.tar.gz](https://nodejs.org/dist/latest-v10.x/node-v10.17.0-linux-armv6l.tar.gz)
+In my case it was: [node-v10.17.0-linux-armv6l.tar.gz](https://nodejs.org/download/release/v10.17.0/node-v10.17.0-linux-armv6l.tar.gz)
 
 You can download the file either by doing (if your pi is connected to the internet):
 
-`wget https://nodejs.org/dist/latest-v10.x/node-v10.17.0-linux-armv6l.tar.gz`
+`wget https://nodejs.org/download/release/v10.17.0/node-v10.17.0-linux-armv6l.tar.gz`
 
 or
 
