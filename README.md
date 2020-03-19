@@ -21,3 +21,7 @@ If you would like to do the setup yourself refer to these instructions:
 
 - [Setting up the Raspberry Pi, Node & Osc servers](./docs/Pi_Setup.md)
 - [Setting up the client](./client/README.md)
+
+## Source:
+
+To configure the raspberry Pi to switch between Access Point and WLAN modes, [check this guide](https://github.com/Autodrop3d/raspiApWlanScripts/blob/master/setup_wlan_and_AP_modes.sh).
