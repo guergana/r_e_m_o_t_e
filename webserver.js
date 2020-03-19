@@ -54,8 +54,8 @@ console.log("--- Static file server running at port: " + port + " ---");
 /**** sockets and OSC ***/
 
 const options = {
-  open: { host: "127.0.0.1", port: 5432 },
-  send: { host: "127.0.0.1", port: 5433 }
+  open: { host: "127.0.0.1", port: 8080 },
+  send: { host: "127.0.0.1", port: 8080 }
 };
 
 const osc = new OSC({
