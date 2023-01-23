@@ -1,10 +1,17 @@
+## Installation
+
+- Install packages on root folder by running `npm install` or `yarn install`.
+- Install packages in client folder by going to `/client` and running `npm install` or `yarn install`.
+
 ## The easy way (recommended)
 
 ### In dev:
 
-Make sure to go to `/client` and run `yarn build` to serve the lastest changes.
+Make sure to go to `/client` and run `yarn build` to serve the latest changes.
 
 Run `node webserver.js` and open `https://localhost:8080` to see the project.
+
+If you want to use a different port run `node webserver.js PORT_NUMBER`, ex. `node webserver.js 8081`
 
 ### In production
 
