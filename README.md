@@ -9,7 +9,7 @@ Note: Please make sure you are using node 16. Node 17 wont work
 
 ### In dev:
 
-Make sure to go to `/client` and run `yarn build` to serve the latest changes.
+Note for devs: Make sure to go to `/client` and run `yarn build` to serve the latest changes. This will update the build at `client/build`, if you made changes in the source code. If you just want to run the last working build we had, go to the next step. 
 
 Run `node webserver.js` then in the '/' (root) folder and open `https://localhost:8080` to see the project.
 
