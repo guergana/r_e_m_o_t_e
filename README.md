@@ -9,7 +9,7 @@
 
 Make sure to go to `/client` and run `yarn build` to serve the latest changes.
 
-Run `node webserver.js` and open `https://localhost:8080` to see the project.
+Run `node webserver.js` then in the '/' (root) folder and open `https://localhost:8080` to see the project.
 
 If you want to use a different port run `node webserver.js PORT_NUMBER`, ex. `node webserver.js 8081`
 
