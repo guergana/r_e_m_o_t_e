@@ -2,9 +2,9 @@ import React from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //absolute imports possible thanks to NODE_PATH var in .env file
-import Home from "components/Home";
-import Keyboard from "components/Keyboard";
-import ShaderParams from "components/ShaderParams";
+import Home from "./components/Home";
+import Keyboard from "./components/Keyboard";
+import ShaderParams from "./components/ShaderParams";
 
 function App() {
   return (

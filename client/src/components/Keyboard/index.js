@@ -1,6 +1,6 @@
 import React from "react";
-import keysData from "data/keys";
-import Key from "components/Key";
+import keysData from "../../data/keys";
+import Key from "../Key";
 
 class Keyboard extends React.Component {
   state = {
