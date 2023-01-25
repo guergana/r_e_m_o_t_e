@@ -1,23 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.7c396f67.chunk.css",
-    "main.js": "/static/js/main.3aff4eb6.chunk.js",
-    "main.js.map": "/static/js/main.3aff4eb6.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.81534a39.js",
-    "runtime-main.js.map": "/static/js/runtime-main.81534a39.js.map",
-    "static/js/2.1947eb6b.chunk.js": "/static/js/2.1947eb6b.chunk.js",
-    "static/js/2.1947eb6b.chunk.js.map": "/static/js/2.1947eb6b.chunk.js.map",
+    "main.css": "/static/css/main.9031d388.css",
+    "main.js": "/static/js/main.254016c4.js",
+    "static/media/liberationmono-bold-webfont.woff": "/static/media/liberationmono-bold-webfont.585c0eec69247e5dfd55.woff",
+    "static/media/liberationmono-regular-webfont.woff": "/static/media/liberationmono-regular-webfont.cc92a62fe5361804dbe4.woff",
+    "static/media/liberationmono-bold-webfont.woff2": "/static/media/liberationmono-bold-webfont.69e2e11a401b62a0b107.woff2",
+    "static/media/liberationmono-regular-webfont.woff2": "/static/media/liberationmono-regular-webfont.2d91c2ff894643282178.woff2",
     "index.html": "/index.html",
-    "precache-manifest.7a1faae65328aee3b5cbe785b77680f0.js": "/precache-manifest.7a1faae65328aee3b5cbe785b77680f0.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.7c396f67.chunk.css.map": "/static/css/main.7c396f67.chunk.css.map",
-    "static/js/2.1947eb6b.chunk.js.LICENSE": "/static/js/2.1947eb6b.chunk.js.LICENSE",
-    "static/media/App.scss": "/static/media/liberationmono-regular-webfont.8b7cacc1.woff2"
+    "main.9031d388.css.map": "/static/css/main.9031d388.css.map",
+    "main.254016c4.js.map": "/static/js/main.254016c4.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.81534a39.js",
-    "static/js/2.1947eb6b.chunk.js",
-    "static/css/main.7c396f67.chunk.css",
-    "static/js/main.3aff4eb6.chunk.js"
+    "static/css/main.9031d388.css",
+    "static/js/main.254016c4.js"
   ]
 }
