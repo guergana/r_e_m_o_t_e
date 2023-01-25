@@ -1,5 +1,7 @@
 ## Installation
 
+Note: Please make sure you are using node 16. Node 17 wont work
+
 1. Install packages on root folder by running `npm install` or `yarn install`.
 1. Install packages in client folder by going to `/client` and running `npm install` or `yarn install`.
 
